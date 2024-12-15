@@ -2,7 +2,7 @@
  * adc.c
  *
  * Created: 20/11/2024 18:49:16
- *  Author: DANBINA
+ *  Author: eduardomelo
  */ 
 
 

@@ -2,7 +2,7 @@
  * adc.h
  *
  * Created: 30/10/2024 16:06:56
- *  Author: afonsomiguel
+ *  Author: eduardomelo
  */ 
 
 

@@ -2,7 +2,7 @@
  * minha_lib.h
  *
  * Created: 20/11/2024 18:51:42
- *  Author: DANBINA
+ *  Author: eduardomelo
  */ 
 #ifndef MINHA_LIB_H_
 #define MINHA_LIB_H_

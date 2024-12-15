@@ -2,7 +2,7 @@
  * serial.c
  *
  * Created: 20/11/2024 18:49:55
- *  Author: DANBINA
+ *  Author: eduardomelo
  */ 
 #include "serial.h"
 #include "minha_lib.h"
