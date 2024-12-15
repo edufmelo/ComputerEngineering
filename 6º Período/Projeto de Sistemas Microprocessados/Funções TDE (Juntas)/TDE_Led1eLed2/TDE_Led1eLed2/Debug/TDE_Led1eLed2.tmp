@@ -1,0 +1,37 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>D:\PUCPR\Microchip studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\Debug\TDE_Led1eLed2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>TDE_Led1eLed2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>TDE_Led1eLed2.map</FILE>
+  <FILE>TDE_Led1eLed2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <beginLED1><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>9</LINE></beginLED1>
+  <tryS2LED1><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>15</LINE></tryS2LED1>
+  <ligaLED1><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>12</LINE></ligaLED1>
+  <beginLED2><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>24</LINE></beginLED2>
+  <desligaLED1><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>18</LINE></desligaLED1>
+  <S2LED2_01><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>28</LINE></S2LED2_01>
+  <S2LED2_02><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>41</LINE></S2LED2_02>
+  <S1LED2_01><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>34</LINE></S1LED2_01>
+  <ligaLED2><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>31</LINE></ligaLED2>
+  <desligaLED2><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>38</LINE></desligaLED2>
+  <S1LED2_02><FILE>C:\Users\usuario\OneDrive\Área de Trabalho\Projeto de Sistemas Microprocessados\Funções TDE (Juntas)\TDE_Led1eLed2\TDE_Led1eLed2\main.asm</FILE><LINE>45</LINE></S1LED2_02>
+ </LABELS>
+</ASSEMBLER_INFO>

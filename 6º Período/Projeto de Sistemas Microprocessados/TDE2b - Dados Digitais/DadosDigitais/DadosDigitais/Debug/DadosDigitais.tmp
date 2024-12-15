@@ -1,0 +1,52 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>D:\PUCPR\Microchip studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\Debug\DadosDigitais.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>DadosDigitais.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>DadosDigitais.map</FILE>
+  <FILE>DadosDigitais.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <config><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</FILE><LINE>4</LINE></config>
+  <tx_string><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>25</LINE></tx_string>
+  <tx_string_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>29</LINE></tx_string_loop>
+  <tx_string_fim><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>36</LINE></tx_string_fim>
+  <tx_R17><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>66</LINE></tx_R17>
+  <config_4800_8_n_2><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>46</LINE></config_4800_8_n_2>
+  <tx_R17_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>68</LINE></tx_R17_loop>
+  <rx_R17><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>77</LINE></rx_R17>
+  <rx_R17_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>79</LINE></rx_R17_loop>
+  <loop_incremento><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>81</LINE></loop_incremento>
+  <pause><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>83</LINE></pause>
+  <config_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>99</LINE></config_loop>
+  <rx_check><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>129</LINE></rx_check>
+  <tx_R18><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>108</LINE></tx_R18>
+  <tx_R18_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>110</LINE></tx_R18_loop>
+  <tx_R19><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>119</LINE></tx_R19>
+  <tx_R19_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>121</LINE></tx_R19_loop>
+  <no_input><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\tx_serial.inc</FILE><LINE>135</LINE></no_input>
+  <imprime><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</FILE><LINE>17</LINE></imprime>
+  <welcome><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</FILE><LINE>25</LINE></welcome>
+  <start><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</FILE><LINE>7</LINE></start>
+  <digite><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</FILE><LINE>28</LINE></digite>
+  <main_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</FILE><LINE>11</LINE></main_loop>
+  <resultado_dado1><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</FILE><LINE>31</LINE></resultado_dado1>
+  <resultado_dado2><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TDE2b - Dados Digitais\DadosDigitais\DadosDigitais\main.asm</FILE><LINE>34</LINE></resultado_dado2>
+ </LABELS>
+</ASSEMBLER_INFO>
