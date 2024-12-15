@@ -1,0 +1,56 @@
+<PrimeiraTela>
+    BoxLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: 1,0,0,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        Label:
+            text:'Primeira Tela'
+        BoxLayout:
+            size_hint_y:0.2
+            orientation: 'horizontal'
+            Button:
+                text:'Proximo'
+                on_release: root.proximo()
+
+<SegundaTela>
+    BoxLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: 0,1,0,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        Label:
+            text:'Segunda Tela'
+        BoxLayout:
+            size_hint_y:0.2
+            orientation: 'horizontal'
+            Button:
+                text:'Anterior'
+                on_release: root.anterior()                
+            Button:
+                text:'Proximo'
+                on_release: root.proximo()
+
+<TerceiraTela>
+    BoxLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: 0,0,1,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        Label:
+            text:'Terceira Tela'
+        BoxLayout:
+            size_hint_y:0.2
+            orientation: 'horizontal'
+            Button:
+                text:'Anterior'
+                on_release: root.anterior()                

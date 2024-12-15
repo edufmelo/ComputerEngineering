@@ -1,0 +1,84 @@
+*_REVISÃO PROVA - PROGRAMAÇÃO ORIENTADA A OBJETOS_*
+
+- *_Polimorfismo:_*  
+
+Definimos Polimorfismo como um princípio a partir do qual as classes derivadas de uma única classe base são capazes de invocar os métodos que, embora apresentem a mesma assinatura, comportam-se de maneira diferente para cada uma das classes derivadas. Com o Polimorfismo, os mesmos atributos e objetos podem ser utilizados em objetos distintos, porém, com implementações lógicas diferentes.
+
+O polimorfismo no código fornecido (TDE2) é exemplificado pelo uso do array Animal[] zoo e pela chamada
+dinâmica de métodos como fazerBarulho() (entre outros), que permitem que diferentes tipos de
+animais respondam de maneira específica às chamadas de método
+
+
+- *_Herança:_* 
+
+É um mecanismo que permite criar uma nova classe baseada em uma classe existente. A nova classe, chamada de subclasse ou classe derivada, herda os atributos e métodos da classe existente, conhecida como superclasse ou classe base. A herança promove a reutilização de código e a criação de hierarquias de classes que refletem relações do mundo real, como "um cão é um tipo de animal". Usa-se "extends" para estender outra classe, isso significa que ela está herdeando os atributos e métodos da classe pai (ou superclasse).
+
+- *_Encapsulamento:_* 
+
+O encapsulamento refere ao conceito de esconder os detalhes internos de uma classe e só permitir que ela seja manipulada por meio de métodos públicos definidos. Isso significa que os dados internos da classe (os atributos) são protegidos do acesso direto de fora da classe, e qualquer interação com esses dados deve passar por métodos (getters, setters e outros métodos públicos).
+
+
+- *_Exceções não checadas (unchecked/não verificadas):_*
+
+Representam defeitos no programa (bugs/erros de lógica).
+
+São subclasses de RuntimeException e são normalmente implementadas usando IllegalArgumentException, NullPointerException ou IllegalStateException.
+
+Um método não é obrigado a estabelecer uma política para as exceções não checadas lançadas por sua execução (e quase sempre nunca o fazem).
+
+
+- *_Exceções checadas (checked/verificadas):_*
+
+Representam condições inválidas em áreas fora do controle imediato do programa (problemas de entradas inválidas do usuário, banco de dados, falhas de rede, arquivos ausentes).
+
+São subclasses de Exception.
+
+Um método é obrigado a estabelecer uma política para todas as exceções checadas lançadas por sua implementação (ou passar a exceção checada mais acima na pilha, ou manipulá-la de alguma forma).
+
+
+- *_Ligação/Vinculação Inicial:_*
+
+(_Tempo de Compilação_: O tempo que leva pro programa interpretar todas as informações e juntar tudo para que sua máquina entenda tudo claramente e a aplicação possa ser executada. Compilação é mais interno.)
+
+Garante que essas decisões são feitas em tempo de compilação, resultando em um código mais eficiente em tempo de execução e ajudando a evitar erros relacionados a métodos não encontrados.
+
+
+- *_Ligação/Vinculação Tardia:_*
+ 
+(_Tempo de Execução_: Pode ser o tempo que o programa ficou executando durante algum processo (exemplo, quando você inicia o programa em alguma IDE e depois encerra) ou também, em outras palavras, pode ser o tempo que o programa recebe alguma resposta especifica, como por exemplo, cadastrar usuário após clicar no botão levar 5 segundos, o tempo de execução, neste caso, é cinco segundos. Execução - mais externo.)
+
+Permite que o comportamento dos métodos seja decidido em tempo de execução, com base no tipo real do objeto.
+
+
+- *_Coerção ou Casting:_*
+ 
+Processo de converter um tipo de dado em outro. Essa conversão pode ser feita de forma implícita ou explícita. 
+
+Exemplo: AnimalSelvagem as = (AnimalSelvagem)a;
+
+A coerção (ou casting) na linha acima é necessária para converter o objeto a, que é do tipo Animal,
+para o tipo AnimalSelvagem. No contexto do projeto, a é uma instância da classe Animal ou de uma de suas subclasses, mas o compilador não pode garantir que a implementa a interface AnimalSelvagem apenas pelo tipo declarado. Para poder chamar métodos definidos na interface AnimalSelvagem, é necessário realizar o casting para garantir ao compilador que a é de fato uma instância de uma classe que implementa essa interface. Isso permite usar os métodos específicos da interface AnimalSelvagem no objeto a.
+
+
+- *_Interface:_*
+
+A interface é um recurso muito utilizado em Java, bem como na maioria das linguagens orientadas a objeto, para “obrigar” a um determinado grupo de classes a ter métodos ou propriedades em comum para existir em um determinado contexto, contudo os métodos podem ser implementados em cada classe de uma maneira diferente. Pode-se dizer, a grosso modo, que uma interface é um contrato que quando assumido por uma classe deve ser implementado. 
+
+Não possui corpo em seus métodos dentro da interface.
+
+
+- *_Overring:_*
+
+É a redefenição de um método herdado. Os métodos apresentam assinaturas iguais.
+
+
+- *_Métodos e Classes Abstratas:_*
+
+Uma classe abstrata em Java é uma classe que não pode ser instanciada diretamente; ou seja, você não pode criar objetos a partir dela. Em vez disso, ela serve como uma classe base para outras classes que podem ser instanciadas. Uma classe abstrata pode conter métodos abstratos e métodos concretos. O objetivo de uma classe abstrata é fornecer uma base comum para outras classes, como Animal, Canideo, Felino e Roedor, realizados no TDE2.
+
+Métodos abstratos são declarados sem implementação, ou seja, apenas com a assinatura do método,
+e as subclasses são obrigadas a fornecer a implementação desses métodos. Métodos concretos têm implementação na própria classe abstrata e podem ser herdados pelas subclasses.
+
+
+
+

@@ -1,0 +1,49 @@
+<Principal>
+    orientation: 'vertical'
+
+    Label:
+        text: "Fonte Aumentada"
+        font_size: 40
+
+    Label:
+        text: "Outra fonte"
+        font_name: "gigi"
+        font_size:30 
+
+    Label:
+        text: "Fonte colorida"
+        color: 255/255, 50/255, 180/255, 1
+        font_size:30         
+
+    Label:
+        text: "Markup: [b]Negrito[/b] [i]Italico[/i] [u]Sublinhado[/u]"
+        font_size:25 
+        markup: True
+
+    Label:
+        text: "Markup: [color=0000FF][b]Azul Negrito[/b][/color]"
+        font_size:25 
+        markup: True   
+
+    Label:
+        text: "Markup: [font=GIGI][color=FF0000]Vemelho Gigi[/color][/font]"
+        font_size:25 
+        markup: True           
+
+    Label:
+        text: 'multitext \n linha 2 \n linha 3 \n linha 4'
+        font_size:15
+
+    Label:
+        text: 'Alinhar a esquerda'
+        text_size: self.width, None
+
+    Label:
+        text: 'Alinhar a direita'
+        text_size: self.width, None
+        halign: 'right'
+
+    Label:
+        text: 'Quebra de linha automática. Esse texto irá mudar de linha automaticamente quando chegar no fim do quadro'
+        font_size: 15
+        text_size: self.width, None

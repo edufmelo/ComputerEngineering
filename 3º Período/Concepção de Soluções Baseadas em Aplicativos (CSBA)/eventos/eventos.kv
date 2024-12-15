@@ -1,0 +1,83 @@
+<Principal>
+    orientation: 'vertical'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label: 
+            text:'on_press = pressionar o botão'
+        Button:
+            text: 'on_press'
+            on_press: root.pressionar_botao()
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label: 
+            text:'on_release = clicar e soltar o botão'
+        Button:
+            text: 'on_release'
+            on_release: root.clicar_botao()
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label: 
+            text:'on_text = usuario digita no campo'
+        TextInput:
+            text: ''
+            id: campo_digitar_1
+            on_text: root.digitar_no_input()
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label: 
+            text:'igual o campo acima, mas sem usar id para o textinput'
+            text_size: self.width, None
+        TextInput:
+            text: ''
+            on_text: root.digitar_no_input_2(self.text)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label: 
+            text:'on_text no spinner = escolhe opção do spinner'
+            text_size: self.width, None
+        Spinner:
+            values: ("Maça","Banana", "Pera","Abacaxi")
+            text: "Escolha uma fruta"
+            on_text: root.escolhe_spinner(self.text)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label: 
+            text:'on_active = marcou ou desmarcou o checkbox'
+            text_size: self.width, None
+        CheckBox:
+            text: "Escolha uma fruta"
+            on_active: root.marcou_check(self.active)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label: 
+            text:'on_active = marcou ou desmarcou o checkbox'
+            text_size: self.width, None
+        BoxLayout:
+            orientation: 'horizontal'
+            CheckBox:
+                group: 'opcoes'
+                on_active: root.marcou_opcao('op_1')
+            Label:
+                text:"opção 1"
+            CheckBox:
+                group: 'opcoes'
+                on_active: root.marcou_opcao('op_2')
+            Label:
+                text:"opção 2"
+            CheckBox:
+                group: 'opcoes'
+                on_active: root.marcou_opcao('op_3')
+            Label:
+                text:"opção 3"
+
+    Label:
+        id: saida
+        text: 'mensagem do evento'
+        font_size: 15

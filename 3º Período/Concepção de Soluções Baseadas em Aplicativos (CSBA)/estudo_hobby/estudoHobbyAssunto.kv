@@ -1,0 +1,113 @@
+#:import utils kivy.utils
+<Tela>:
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex('#F05F40')        
+            #rgba: root.background_color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BoxLayout:
+        size_hint: (None,None)    
+        height:50
+        width:600   
+        Label:
+            text:'Digite sua engenharia: '
+            font_size: 20
+        TextInput:
+            id: curso
+            font_size: 20
+    Label:
+        size_hint: (None,None)    
+        height:50
+        width:600     
+        text:'Período letivo'
+        font_size: 20
+    GridLayout:
+        size_hint: (None,None)    
+        height:50
+        width:600     
+        cols: 6
+        Label:
+            text:'1º'
+        CheckBox: 
+            id:ck1
+            background_color: 1 , 0 , 0 , 1
+            group: 'per'
+            on_active: root.periodos(self.active,'1º')       
+        Label:
+            text:'2º'
+        CheckBox:
+            id:ck2
+            group: 'per'
+            on_active: root.periodos(self.active,'2º')
+        Label:
+            text:'3º'
+        CheckBox:
+            id:ck3
+            group: 'per'
+            on_active: root.periodos(self.active,'3º')
+    Label:
+        size_hint: (None,None)    
+        height:50
+        width:600 
+        text:'Hobby'
+        font_size: 20
+    GridLayout:
+        size_hint: (None,None)    
+        height:50
+        width:600 
+        cols: 6
+        CheckBox:
+            id:ck4
+            on_active: root.hobbies(self.active,'natação')
+        Label:
+            text: 'natação'
+        CheckBox:
+            id:ck5
+            on_active:root.hobbies(self.active,'futebol')
+        Label:
+            text: 'futebol'
+        CheckBox:
+            id:ck6
+            on_active:root.hobbies(self.active,'games')
+        Label:
+            text:'games'
+    Label:
+        id: mensagem
+        size_hint: (None,None)    
+        height:80
+        width:600 
+        text:' '
+        font_size: 18
+        markup: True
+
+    BoxLayout:
+        size_hint_y: None    
+        height:50
+        width:600     
+        Label:
+            text:'Assuntos: '
+            width:70
+            pos:10,0
+        Spinner:
+            background_color: 1, 0, 0, 1
+            id: opcoes
+            text: 'assuntos'
+            values:('Gastronomia','Esportes','Política','Educação','Cuidados pessoais')
+            width: 150
+            size_hint_x: None
+            on_text: root.assuntos(opcoes.text)
+        Button:
+            background_color: 1, 0, 0, 1
+            text: 'OK'
+            on_press: root.gera()   
+        Button:
+            background_color: 1, 0, 0, 1
+            text: 'Limpa'
+            on_press: root.limpa()           
+        Button:
+            background_color: 1, 0, 0, 1
+            text: 'Sair'
+            on_press: root.sair()                
