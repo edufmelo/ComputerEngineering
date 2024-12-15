@@ -1,0 +1,1 @@
+O objetivo deste projeto é implementar um sistema de controle de temperatura para uma sala usando uma máquina de estados. O sistema utilizará o sensor de temperatura LM35 conectado ao canal A0 do Arduino para medir a temperatura ambiente e o LED embutido em PB5 para simular o controle de um aquecedor.
