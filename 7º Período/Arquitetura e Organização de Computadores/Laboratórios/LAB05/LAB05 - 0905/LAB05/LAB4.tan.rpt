@@ -1,0 +1,441 @@
+Classic Timing Analyzer report for LAB4
+Mon Apr 28 19:34:21 2025
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLOCK_27'
+  7. Clock Hold: 'CLOCK_27'
+  8. tco
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                                   ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                                              ; To                                                                                ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A                                      ; None          ; 9.637 ns                         ; REG_RS:SAiDA|RS_FF[4]                                                             ; LEDG[4]                                                                           ; CLOCK_27   ; --       ; 0            ;
+; Clock Setup: 'CLOCK_27'      ; N/A                                      ; None          ; 45.43 MHz ( period = 22.012 ns ) ; TableRom:inst9|REG_FF[6]                                                          ; REG_RS:SAiDA|RS_FF[5]                                                             ; CLOCK_27   ; CLOCK_27 ; 0            ;
+; Clock Hold: 'CLOCK_27'       ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[19] ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; 16           ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                                                   ;                                                                                   ;            ;          ; 16           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
+; tsu Requirement                                                     ; 10 ns              ; *    ; *  ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK_27        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK_27'                                                                                                                                                                                                                                       ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                      ; To                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 45.43 MHz ( period = 22.012 ns )                    ; TableRom:inst9|REG_FF[6]  ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.676 ns               ;
+; N/A                                     ; 45.45 MHz ( period = 22.002 ns )                    ; TableRom:inst9|REG_FF[6]  ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.671 ns               ;
+; N/A                                     ; 45.63 MHz ( period = 21.914 ns )                    ; TableRom:inst9|REG_FF[10] ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.627 ns               ;
+; N/A                                     ; 45.65 MHz ( period = 21.908 ns )                    ; TableRom:inst9|REG_FF[10] ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.624 ns               ;
+; N/A                                     ; 46.00 MHz ( period = 21.740 ns )                    ; TableRom:inst9|REG_FF[6]  ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.540 ns               ;
+; N/A                                     ; 46.14 MHz ( period = 21.672 ns )                    ; TableRom:inst9|REG_FF[6]  ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.507 ns               ;
+; N/A                                     ; 46.20 MHz ( period = 21.646 ns )                    ; TableRom:inst9|REG_FF[10] ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.493 ns               ;
+; N/A                                     ; 46.35 MHz ( period = 21.574 ns )                    ; TableRom:inst9|REG_FF[10] ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.458 ns               ;
+; N/A                                     ; 46.50 MHz ( period = 21.506 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.533 ns               ;
+; N/A                                     ; 46.54 MHz ( period = 21.488 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.529 ns               ;
+; N/A                                     ; 46.71 MHz ( period = 21.408 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.484 ns               ;
+; N/A                                     ; 46.75 MHz ( period = 21.390 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.480 ns               ;
+; N/A                                     ; 47.38 MHz ( period = 21.106 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.336 ns               ;
+; N/A                                     ; 47.59 MHz ( period = 21.012 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.289 ns               ;
+; N/A                                     ; 48.00 MHz ( period = 20.834 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.203 ns               ;
+; N/A                                     ; 48.22 MHz ( period = 20.740 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.156 ns               ;
+; N/A                                     ; 48.77 MHz ( period = 20.506 ns )                    ; TableRom:inst9|REG_FF[6]  ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.923 ns                ;
+; N/A                                     ; 48.99 MHz ( period = 20.412 ns )                    ; TableRom:inst9|REG_FF[10] ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.876 ns                ;
+; N/A                                     ; 49.38 MHz ( period = 20.250 ns )                    ; TableRom:inst9|REG_FF[10] ; REG_RS:SAiDA|RS_FF[1] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.796 ns                ;
+; N/A                                     ; 49.46 MHz ( period = 20.218 ns )                    ; TableRom:inst9|REG_FF[6]  ; REG_RS:SAiDA|RS_FF[1] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.780 ns                ;
+; N/A                                     ; 50.35 MHz ( period = 19.862 ns )                    ; TableRom:inst9|REG_FF[6]  ; REG_RS:SAiDA|RS_FF[3] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.602 ns                ;
+; N/A                                     ; 50.59 MHz ( period = 19.768 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:AC|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.667 ns                ;
+; N/A                                     ; 50.60 MHz ( period = 19.764 ns )                    ; TableRom:inst9|REG_FF[10] ; REG_RS:SAiDA|RS_FF[3] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.553 ns                ;
+; N/A                                     ; 50.84 MHz ( period = 19.670 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:AC|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.618 ns                ;
+; N/A                                     ; 51.21 MHz ( period = 19.528 ns )                    ; TableRom:inst9|REG_FF[6]  ; PC:inst2|REG_FF[6]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.547 ns                ;
+; N/A                                     ; 51.46 MHz ( period = 19.434 ns )                    ; TableRom:inst9|REG_FF[10] ; PC:inst2|REG_FF[6]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.500 ns                ;
+; N/A                                     ; 52.53 MHz ( period = 19.036 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:R0|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.298 ns                ;
+; N/A                                     ; 52.66 MHz ( period = 18.990 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:AC|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.277 ns                ;
+; N/A                                     ; 52.79 MHz ( period = 18.942 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:R0|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.251 ns                ;
+; N/A                                     ; 52.92 MHz ( period = 18.896 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:AC|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.230 ns                ;
+; N/A                                     ; 53.39 MHz ( period = 18.730 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:AC|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.145 ns                ;
+; N/A                                     ; 53.67 MHz ( period = 18.632 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:AC|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.096 ns                ;
+; N/A                                     ; 54.08 MHz ( period = 18.492 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:AC|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.032 ns                ;
+; N/A                                     ; 54.11 MHz ( period = 18.480 ns )                    ; TableRom:inst9|REG_FF[10] ; PC:inst2|REG_FF[1]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.026 ns                ;
+; N/A                                     ; 54.17 MHz ( period = 18.460 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:AC|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.016 ns                ;
+; N/A                                     ; 54.21 MHz ( period = 18.448 ns )                    ; TableRom:inst9|REG_FF[6]  ; PC:inst2|REG_FF[1]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.010 ns                ;
+; N/A                                     ; 54.22 MHz ( period = 18.442 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:R0|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 9.004 ns                ;
+; N/A                                     ; 54.29 MHz ( period = 18.418 ns )                    ; TableRom:inst9|REG_FF[6]  ; PC:inst2|REG_FF[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.994 ns                ;
+; N/A                                     ; 54.46 MHz ( period = 18.362 ns )                    ; TableRom:inst9|REG_FF[6]  ; PC:inst2|REG_FF[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.960 ns                ;
+; N/A                                     ; 54.50 MHz ( period = 18.348 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:R0|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.957 ns                ;
+; N/A                                     ; 54.59 MHz ( period = 18.320 ns )                    ; TableRom:inst9|REG_FF[10] ; PC:inst2|REG_FF[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.945 ns                ;
+; N/A                                     ; 54.75 MHz ( period = 18.264 ns )                    ; TableRom:inst9|REG_FF[10] ; PC:inst2|REG_FF[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.911 ns                ;
+; N/A                                     ; 55.07 MHz ( period = 18.160 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:R0|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.863 ns                ;
+; N/A                                     ; 55.11 MHz ( period = 18.144 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:AC|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.852 ns                ;
+; N/A                                     ; 55.36 MHz ( period = 18.062 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:R0|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.814 ns                ;
+; N/A                                     ; 55.40 MHz ( period = 18.050 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:AC|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.805 ns                ;
+; N/A                                     ; 57.07 MHz ( period = 17.522 ns )                    ; TableRom:inst9|REG_FF[6]  ; PC:inst2|REG_FF[7]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.543 ns                ;
+; N/A                                     ; 57.38 MHz ( period = 17.428 ns )                    ; TableRom:inst9|REG_FF[10] ; PC:inst2|REG_FF[7]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.496 ns                ;
+; N/A                                     ; 58.58 MHz ( period = 17.070 ns )                    ; TableRom:inst9|REG_FF[6]  ; PC:inst2|REG_FF[4]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.315 ns                ;
+; N/A                                     ; 58.91 MHz ( period = 16.976 ns )                    ; TableRom:inst9|REG_FF[10] ; PC:inst2|REG_FF[4]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.268 ns                ;
+; N/A                                     ; 59.97 MHz ( period = 16.676 ns )                    ; TableRom:inst9|REG_FF[6]  ; PC:inst2|REG_FF[3]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.121 ns                ;
+; N/A                                     ; 60.32 MHz ( period = 16.578 ns )                    ; TableRom:inst9|REG_FF[10] ; PC:inst2|REG_FF[3]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 8.072 ns                ;
+; N/A                                     ; 61.85 MHz ( period = 16.168 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:R0|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.867 ns                ;
+; N/A                                     ; 62.08 MHz ( period = 16.108 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:R0|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.839 ns                ;
+; N/A                                     ; 62.20 MHz ( period = 16.076 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:R0|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.823 ns                ;
+; N/A                                     ; 62.23 MHz ( period = 16.070 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:R0|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.818 ns                ;
+; N/A                                     ; 63.16 MHz ( period = 15.832 ns )                    ; TableRom:inst9|REG_FF[10] ; REG_RS:SAiDA|RS_FF[0] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.587 ns                ;
+; N/A                                     ; 63.29 MHz ( period = 15.800 ns )                    ; TableRom:inst9|REG_FF[6]  ; REG_RS:SAiDA|RS_FF[0] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.571 ns                ;
+; N/A                                     ; 63.44 MHz ( period = 15.764 ns )                    ; TableRom:inst9|REG_FF[9]  ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.558 ns                ;
+; N/A                                     ; 63.88 MHz ( period = 15.654 ns )                    ; TableRom:inst9|REG_FF[12] ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.503 ns                ;
+; N/A                                     ; 64.53 MHz ( period = 15.496 ns )                    ; TableRom:inst9|REG_FF[11] ; REG_RS:SAiDA|RS_FF[1] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.425 ns                ;
+; N/A                                     ; 64.76 MHz ( period = 15.442 ns )                    ; TableRom:inst9|REG_FF[11] ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.397 ns                ;
+; N/A                                     ; 64.78 MHz ( period = 15.436 ns )                    ; TableRom:inst9|REG_FF[11] ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.394 ns                ;
+; N/A                                     ; 65.54 MHz ( period = 15.258 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.415 ns                ;
+; N/A                                     ; 65.62 MHz ( period = 15.240 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.411 ns                ;
+; N/A                                     ; 65.82 MHz ( period = 15.194 ns )                    ; TableRom:inst9|REG_FF[11] ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.274 ns                ;
+; N/A                                     ; 66.02 MHz ( period = 15.148 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.360 ns                ;
+; N/A                                     ; 66.09 MHz ( period = 15.130 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.356 ns                ;
+; N/A                                     ; 66.71 MHz ( period = 14.990 ns )                    ; TableRom:inst9|REG_FF[12] ; REG_RS:SAiDA|RS_FF[1] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.172 ns                ;
+; N/A                                     ; 66.91 MHz ( period = 14.946 ns )                    ; TableRom:inst9|REG_FF[9]  ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.150 ns                ;
+; N/A                                     ; 66.98 MHz ( period = 14.930 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.251 ns                ;
+; N/A                                     ; 67.06 MHz ( period = 14.912 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.247 ns                ;
+; N/A                                     ; 67.20 MHz ( period = 14.882 ns )                    ; TableRom:inst9|REG_FF[11] ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.117 ns                ;
+; N/A                                     ; 67.36 MHz ( period = 14.846 ns )                    ; TableRom:inst9|REG_FF[12] ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.099 ns                ;
+; N/A                                     ; 67.40 MHz ( period = 14.836 ns )                    ; TableRom:inst9|REG_FF[12] ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.095 ns                ;
+; N/A                                     ; 68.02 MHz ( period = 14.702 ns )                    ; TableRom:inst9|REG_FF[9]  ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.027 ns                ;
+; N/A                                     ; 68.17 MHz ( period = 14.670 ns )                    ; TableRom:inst9|REG_FF[9]  ; REG_RS:SAiDA|RS_FF[1] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.012 ns                ;
+; N/A                                     ; 68.79 MHz ( period = 14.536 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 7.060 ns                ;
+; N/A                                     ; 69.22 MHz ( period = 14.446 ns )                    ; TableRom:inst9|REG_FF[12] ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.899 ns                ;
+; N/A                                     ; 69.83 MHz ( period = 14.320 ns )                    ; TableRom:inst9|REG_FF[9]  ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.836 ns                ;
+; N/A                                     ; 70.79 MHz ( period = 14.126 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:R0|REG[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.849 ns                ;
+; N/A                                     ; 70.79 MHz ( period = 14.126 ns )                    ; TableRom:inst9|REG_FF[10] ; PC:inst2|REG_FF[0]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.849 ns                ;
+; N/A                                     ; 70.95 MHz ( period = 14.094 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:R0|REG[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.833 ns                ;
+; N/A                                     ; 70.95 MHz ( period = 14.094 ns )                    ; TableRom:inst9|REG_FF[6]  ; PC:inst2|REG_FF[0]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.833 ns                ;
+; N/A                                     ; 71.50 MHz ( period = 13.986 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.782 ns                ;
+; N/A                                     ; 71.74 MHz ( period = 13.940 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 72.22 MHz ( period = 13.846 ns )                    ; TableRom:inst9|REG_FF[11] ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.599 ns                ;
+; N/A                                     ; 72.43 MHz ( period = 13.806 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.692 ns                ;
+; N/A                                     ; 72.68 MHz ( period = 13.758 ns )                    ; TableRom:inst9|REG_FF[11] ; REG_RS:SAiDA|RS_FF[0] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.556 ns                ;
+; N/A                                     ; 72.74 MHz ( period = 13.748 ns )                    ; TableRom:inst9|REG_FF[9]  ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.550 ns                ;
+; N/A                                     ; 72.79 MHz ( period = 13.738 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:AC|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.661 ns                ;
+; N/A                                     ; 72.85 MHz ( period = 13.726 ns )                    ; TableRom:inst9|REG_FF[11] ; PC:inst2|REG_FF[1]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.655 ns                ;
+; N/A                                     ; 73.65 MHz ( period = 13.578 ns )                    ; TableRom:inst9|REG_FF[9]  ; REG_RS:SAiDA|RS_FF[0] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.466 ns                ;
+; N/A                                     ; 73.80 MHz ( period = 13.550 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.564 ns                ;
+; N/A                                     ; 74.46 MHz ( period = 13.430 ns )                    ; TableRom:inst9|REG_FF[11] ; REG_RS:SAiDA|RS_FF[3] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.392 ns                ;
+; N/A                                     ; 74.55 MHz ( period = 13.414 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.499 ns                ;
+; N/A                                     ; 74.91 MHz ( period = 13.350 ns )                    ; TableRom:inst9|REG_FF[12] ; REG_RS:SAiDA|RS_FF[0] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 75.24 MHz ( period = 13.290 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:AC|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.434 ns                ;
+; N/A                                     ; 75.57 MHz ( period = 13.232 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:AC|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.408 ns                ;
+; N/A                                     ; 75.59 MHz ( period = 13.230 ns )                    ; TableRom:inst9|REG_FF[11] ; PC:inst2|REG_FF[6]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.404 ns                ;
+; N/A                                     ; 75.64 MHz ( period = 13.220 ns )                    ; TableRom:inst9|REG_FF[12] ; PC:inst2|REG_FF[1]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.402 ns                ;
+; N/A                                     ; 76.68 MHz ( period = 13.042 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:AC|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.310 ns                ;
+; N/A                                     ; 77.33 MHz ( period = 12.932 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:AC|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.255 ns                ;
+; N/A                                     ; 77.36 MHz ( period = 12.926 ns )                    ; TableRom:inst9|REG_FF[12] ; REG_RS:SAiDA|RS_FF[3] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.140 ns                ;
+; N/A                                     ; 77.45 MHz ( period = 12.912 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:AC|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.248 ns                ;
+; N/A                                     ; 77.52 MHz ( period = 12.900 ns )                    ; TableRom:inst9|REG_FF[9]  ; PC:inst2|REG_FF[1]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.242 ns                ;
+; N/A                                     ; 77.88 MHz ( period = 12.840 ns )                    ; TableRom:inst9|REG_FF[12] ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.096 ns                ;
+; N/A                                     ; 79.15 MHz ( period = 12.634 ns )                    ; TableRom:inst9|REG_FF[12] ; PC:inst2|REG_FF[6]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 6.106 ns                ;
+; N/A                                     ; 79.80 MHz ( period = 12.532 ns )                    ; TableRom:inst9|REG_FF[9]  ; REG_RS:SAiDA|RS_FF[3] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.943 ns                ;
+; N/A                                     ; 80.80 MHz ( period = 12.376 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:R0|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.974 ns                ;
+; N/A                                     ; 81.31 MHz ( period = 12.298 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:AC|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.935 ns                ;
+; N/A                                     ; 81.45 MHz ( period = 12.278 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:R0|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.925 ns                ;
+; N/A                                     ; 81.71 MHz ( period = 12.238 ns )                    ; SM:ME|IncPC               ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.912 ns               ;
+; N/A                                     ; 82.17 MHz ( period = 12.170 ns )                    ; TableRom:inst9|REG_FF[9]  ; PC:inst2|REG_FF[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.876 ns                ;
+; N/A                                     ; 82.29 MHz ( period = 12.152 ns )                    ; TableRom:inst9|REG_FF[10] ; _REG:AC|REG[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.862 ns                ;
+; N/A                                     ; 82.35 MHz ( period = 12.144 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:R0|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.861 ns                ;
+; N/A                                     ; 82.51 MHz ( period = 12.120 ns )                    ; TableRom:inst9|REG_FF[6]  ; _REG:AC|REG[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.846 ns                ;
+; N/A                                     ; 82.59 MHz ( period = 12.108 ns )                    ; TableRom:inst9|REG_FF[9]  ; PC:inst2|REG_FF[6]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.843 ns                ;
+; N/A                                     ; 82.92 MHz ( period = 12.060 ns )                    ; TableRom:inst9|REG_FF[12] ; PC:inst2|REG_FF[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.821 ns                ;
+; N/A                                     ; 82.97 MHz ( period = 12.053 ns )                    ; SM:ME|IncPC               ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.726 ns               ;
+; N/A                                     ; 82.97 MHz ( period = 12.052 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:R0|REG[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.818 ns                ;
+; N/A                                     ; 82.97 MHz ( period = 12.052 ns )                    ; TableRom:inst9|REG_FF[11] ; PC:inst2|REG_FF[0]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.818 ns                ;
+; N/A                                     ; 84.15 MHz ( period = 11.884 ns )                    ; TableRom:inst9|REG_FF[11] ; PC:inst2|REG_FF[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.727 ns                ;
+; N/A                                     ; 84.23 MHz ( period = 11.872 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:R0|REG[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.728 ns                ;
+; N/A                                     ; 84.23 MHz ( period = 11.872 ns )                    ; TableRom:inst9|REG_FF[9]  ; PC:inst2|REG_FF[0]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.728 ns                ;
+; N/A                                     ; 84.25 MHz ( period = 11.870 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:AC|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.723 ns                ;
+; N/A                                     ; 84.27 MHz ( period = 11.867 ns )                    ; SM:ME|Set                 ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.540 ns               ;
+; N/A                                     ; 84.45 MHz ( period = 11.842 ns )                    ; TableRom:inst9|REG_FF[11] ; PC:inst2|REG_FF[5]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.712 ns                ;
+; N/A                                     ; 84.57 MHz ( period = 11.825 ns )                    ; SM:ME|Ula                 ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.497 ns               ;
+; N/A                                     ; 84.77 MHz ( period = 11.796 ns )                    ; SM:ME|Set                 ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.469 ns               ;
+; N/A                                     ; 84.79 MHz ( period = 11.794 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:AC|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 85.21 MHz ( period = 11.736 ns )                    ; SM:ME|Set                 ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.409 ns               ;
+; N/A                                     ; 85.27 MHz ( period = 11.728 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:R0|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.653 ns                ;
+; N/A                                     ; 85.54 MHz ( period = 11.690 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:AC|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.633 ns                ;
+; N/A                                     ; 85.79 MHz ( period = 11.656 ns )                    ; SM:ME|IncPC               ; REG_RS:SAiDA|RS_FF[1] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.330 ns               ;
+; N/A                                     ; 85.88 MHz ( period = 11.644 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:R0|REG[0]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.614 ns                ;
+; N/A                                     ; 85.88 MHz ( period = 11.644 ns )                    ; TableRom:inst9|REG_FF[12] ; PC:inst2|REG_FF[0]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.614 ns                ;
+; N/A                                     ; 85.91 MHz ( period = 11.640 ns )                    ; SM:ME|Ula                 ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.311 ns               ;
+; N/A                                     ; 85.94 MHz ( period = 11.636 ns )                    ; TableRom:inst9|REG_FF[9]  ; PC:inst2|REG_FF[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.603 ns                ;
+; N/A                                     ; 86.17 MHz ( period = 11.605 ns )                    ; SM:ME|IncPC               ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.391 ns               ;
+; N/A                                     ; 86.18 MHz ( period = 11.604 ns )                    ; SM:ME|IncPC               ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.277 ns               ;
+; N/A                                     ; 86.60 MHz ( period = 11.548 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:R0|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.563 ns                ;
+; N/A                                     ; 86.63 MHz ( period = 11.543 ns )                    ; SM:ME|Set                 ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.326 ns               ;
+; N/A                                     ; 86.70 MHz ( period = 11.534 ns )                    ; SM:ME|Set                 ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.322 ns               ;
+; N/A                                     ; 86.76 MHz ( period = 11.526 ns )                    ; TableRom:inst9|REG_FF[12] ; PC:inst2|REG_FF[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.548 ns                ;
+; N/A                                     ; 86.92 MHz ( period = 11.505 ns )                    ; SM:ME|IncPC               ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.178 ns               ;
+; N/A                                     ; 87.08 MHz ( period = 11.484 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:AC|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.528 ns                ;
+; N/A                                     ; 87.46 MHz ( period = 11.434 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:AC|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 87.57 MHz ( period = 11.419 ns )                    ; SM:ME|Set                 ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.205 ns               ;
+; N/A                                     ; 87.72 MHz ( period = 11.400 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:AC|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.486 ns                ;
+; N/A                                     ; 87.83 MHz ( period = 11.386 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:AC|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.479 ns                ;
+; N/A                                     ; 87.95 MHz ( period = 11.370 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:R0|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.471 ns                ;
+; N/A                                     ; 88.07 MHz ( period = 11.354 ns )                    ; TableRom:inst9|REG_FF[11] ; _REG:R0|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.468 ns                ;
+; N/A                                     ; 88.08 MHz ( period = 11.353 ns )                    ; SM:ME|Set                 ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.027 ns               ;
+; N/A                                     ; 88.10 MHz ( period = 11.351 ns )                    ; SM:ME|IncPC               ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.134 ns               ;
+; N/A                                     ; 88.15 MHz ( period = 11.344 ns )                    ; SM:ME|Mov                 ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.015 ns               ;
+; N/A                                     ; 88.17 MHz ( period = 11.342 ns )                    ; SM:ME|IncPC               ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.130 ns               ;
+; N/A                                     ; 88.46 MHz ( period = 11.305 ns )                    ; SM:ME|IncPC               ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.978 ns               ;
+; N/A                                     ; 88.61 MHz ( period = 11.286 ns )                    ; SM:ME|IncPC               ; _REG:AC|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.072 ns               ;
+; N/A                                     ; 88.63 MHz ( period = 11.283 ns )                    ; SM:ME|Set                 ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 11.072 ns               ;
+; N/A                                     ; 88.71 MHz ( period = 11.273 ns )                    ; SM:ME|Mov                 ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.944 ns               ;
+; N/A                                     ; 88.94 MHz ( period = 11.243 ns )                    ; SM:ME|Ula                 ; REG_RS:SAiDA|RS_FF[1] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.915 ns               ;
+; N/A                                     ; 89.09 MHz ( period = 11.224 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:R0|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.401 ns                ;
+; N/A                                     ; 89.18 MHz ( period = 11.213 ns )                    ; SM:ME|Mov                 ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.884 ns               ;
+; N/A                                     ; 89.35 MHz ( period = 11.192 ns )                    ; SM:ME|Ula                 ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.976 ns               ;
+; N/A                                     ; 89.36 MHz ( period = 11.191 ns )                    ; SM:ME|Ula                 ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.862 ns               ;
+; N/A                                     ; 89.45 MHz ( period = 11.180 ns )                    ; SM:ME|Decod               ; REG_RS:SAiDA|RS_FF[7] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.853 ns               ;
+; N/A                                     ; 89.94 MHz ( period = 11.119 ns )                    ; SM:ME|Set                 ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.792 ns               ;
+; N/A                                     ; 90.02 MHz ( period = 11.109 ns )                    ; SM:ME|Decod               ; REG_RS:SAiDA|RS_FF[5] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.782 ns               ;
+; N/A                                     ; 90.08 MHz ( period = 11.101 ns )                    ; SM:ME|IncPC               ; REG_RS:SAiDA|RS_FF[3] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.775 ns               ;
+; N/A                                     ; 90.16 MHz ( period = 11.092 ns )                    ; SM:ME|Ula                 ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.763 ns               ;
+; N/A                                     ; 90.48 MHz ( period = 11.052 ns )                    ; SM:ME|IncPC               ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.841 ns               ;
+; N/A                                     ; 90.51 MHz ( period = 11.049 ns )                    ; SM:ME|Decod               ; REG_RS:SAiDA|RS_FF[6] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.722 ns               ;
+; N/A                                     ; 90.73 MHz ( period = 11.022 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:R0|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.300 ns                ;
+; N/A                                     ; 90.74 MHz ( period = 11.020 ns )                    ; SM:ME|Mov                 ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.801 ns               ;
+; N/A                                     ; 90.82 MHz ( period = 11.011 ns )                    ; SM:ME|Mov                 ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.797 ns               ;
+; N/A                                     ; 91.42 MHz ( period = 10.938 ns )                    ; SM:ME|Ula                 ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.719 ns               ;
+; N/A                                     ; 91.50 MHz ( period = 10.929 ns )                    ; SM:ME|Ula                 ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.715 ns               ;
+; N/A                                     ; 91.78 MHz ( period = 10.896 ns )                    ; SM:ME|Mov                 ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.680 ns               ;
+; N/A                                     ; 91.81 MHz ( period = 10.892 ns )                    ; SM:ME|Ula                 ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.563 ns               ;
+; N/A                                     ; 91.97 MHz ( period = 10.873 ns )                    ; SM:ME|Ula                 ; _REG:AC|REG[2]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.657 ns               ;
+; N/A                                     ; 92.11 MHz ( period = 10.856 ns )                    ; SM:ME|Decod               ; _REG:AC|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.639 ns               ;
+; N/A                                     ; 92.18 MHz ( period = 10.848 ns )                    ; TableRom:inst9|REG_FF[12] ; _REG:R0|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.215 ns                ;
+; N/A                                     ; 92.19 MHz ( period = 10.847 ns )                    ; SM:ME|Decod               ; _REG:R0|REG[5]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.635 ns               ;
+; N/A                                     ; 92.34 MHz ( period = 10.830 ns )                    ; TableRom:inst9|REG_FF[9]  ; _REG:R0|REG[3]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 5.204 ns                ;
+; N/A                                     ; 92.34 MHz ( period = 10.830 ns )                    ; SM:ME|Mov                 ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.502 ns               ;
+; N/A                                     ; 92.79 MHz ( period = 10.777 ns )                    ; SM:ME|IncPC               ; _REG:AC|REG[1]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.566 ns               ;
+; N/A                                     ; 92.84 MHz ( period = 10.771 ns )                    ; SM:ME|IncPC               ; PC:inst2|REG_FF[1]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.560 ns               ;
+; N/A                                     ; 92.94 MHz ( period = 10.760 ns )                    ; SM:ME|Mov                 ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.547 ns               ;
+; N/A                                     ; 93.18 MHz ( period = 10.732 ns )                    ; SM:ME|Decod               ; _REG:R0|REG[7]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.518 ns               ;
+; N/A                                     ; 93.56 MHz ( period = 10.688 ns )                    ; SM:ME|Ula                 ; REG_RS:SAiDA|RS_FF[3] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.360 ns               ;
+; N/A                                     ; 93.76 MHz ( period = 10.666 ns )                    ; SM:ME|Decod               ; REG_RS:SAiDA|RS_FF[2] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.340 ns               ;
+; N/A                                     ; 93.99 MHz ( period = 10.639 ns )                    ; SM:ME|Ula                 ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.426 ns               ;
+; N/A                                     ; 94.07 MHz ( period = 10.630 ns )                    ; SM:ME|Set                 ; PC:inst2|REG_FF[6]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.416 ns               ;
+; N/A                                     ; 94.36 MHz ( period = 10.598 ns )                    ; SM:ME|Set                 ; REG_RS:SAiDA|RS_FF[3] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.272 ns               ;
+; N/A                                     ; 94.38 MHz ( period = 10.596 ns )                    ; SM:ME|Decod               ; _REG:AC|REG[6]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.385 ns               ;
+; N/A                                     ; 94.38 MHz ( period = 10.596 ns )                    ; SM:ME|Mov                 ; REG_RS:SAiDA|RS_FF[4] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.267 ns               ;
+; N/A                                     ; 94.49 MHz ( period = 10.583 ns )                    ; SM:ME|IncPC               ; PC:inst2|REG_FF[2]    ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.365 ns               ;
+; N/A                                     ; 94.61 MHz ( period = 10.570 ns )                    ; SM:ME|IncPC               ; _REG:R0|REG[4]        ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.353 ns               ;
+; N/A                                     ; 94.79 MHz ( period = 10.550 ns )                    ; SM:ME|Set                 ; REG_RS:SAiDA|RS_FF[1] ; CLOCK_27   ; CLOCK_27 ; None                        ; None                      ; 10.224 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                           ;                       ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'CLOCK_27'                                                                                                                                                                                                                                                                                                                     ;
++------------------------------------------+------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                                                                                           ; To                                                                                ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[19]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.201 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[18]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.306 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[17]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.440 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]~_Duplicate_1 ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 1.548 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[16]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.543 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[15]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.614 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[14]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.649 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[13]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.755 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[12]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.791 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[11]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.856 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[10]              ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 2.922 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[9]               ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 3.096 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[8]               ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 3.150 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[7]               ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 3.221 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[6]               ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 3.327 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[5]               ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; CLOCK_27   ; CLOCK_27 ; None                       ; None                       ; 3.359 ns                 ;
++------------------------------------------+------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                          ;
++-------+--------------+------------+-----------------------------------------------------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                              ; To      ; From Clock ;
++-------+--------------+------------+-----------------------------------------------------------------------------------+---------+------------+
+; N/A   ; None         ; 9.637 ns   ; REG_RS:SAiDA|RS_FF[4]                                                             ; LEDG[4] ; CLOCK_27   ;
+; N/A   ; None         ; 9.627 ns   ; REG_RS:SAiDA|RS_FF[5]                                                             ; LEDG[5] ; CLOCK_27   ;
+; N/A   ; None         ; 9.618 ns   ; REG_RS:SAiDA|RS_FF[0]                                                             ; LEDG[0] ; CLOCK_27   ;
+; N/A   ; None         ; 9.618 ns   ; REG_RS:SAiDA|RS_FF[1]                                                             ; LEDG[1] ; CLOCK_27   ;
+; N/A   ; None         ; 9.617 ns   ; REG_RS:SAiDA|RS_FF[6]                                                             ; LEDG[6] ; CLOCK_27   ;
+; N/A   ; None         ; 9.598 ns   ; REG_RS:SAiDA|RS_FF[2]                                                             ; LEDG[2] ; CLOCK_27   ;
+; N/A   ; None         ; 9.598 ns   ; REG_RS:SAiDA|RS_FF[3]                                                             ; LEDG[3] ; CLOCK_27   ;
+; N/A   ; None         ; 9.567 ns   ; REG_RS:SAiDA|RS_FF[7]                                                             ; LEDG[7] ; CLOCK_27   ;
+; N/A   ; None         ; 9.322 ns   ; DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20] ; LEDG[8] ; CLOCK_27   ;
++-------+--------------+------------+-----------------------------------------------------------------------------------+---------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Mon Apr 28 19:34:20 2025
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off LAB4 -c LAB4 --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK_27" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]~_Duplicate_1" as buffer
+Info: Clock "CLOCK_27" has Internal fmax of 45.43 MHz between source register "TableRom:inst9|REG_FF[6]" and destination register "REG_RS:SAiDA|RS_FF[5]" (period= 22.012 ns)
+    Info: + Longest register to register delay is 10.676 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X48_Y2_N29; Fanout = 9; REG Node = 'TableRom:inst9|REG_FF[6]'
+        Info: 2: + IC(0.800 ns) + CELL(0.398 ns) = 1.198 ns; Loc. = LCCOMB_X49_Y2_N10; Fanout = 1; COMB Node = 'A~9'
+        Info: 3: + IC(0.264 ns) + CELL(0.436 ns) = 1.898 ns; Loc. = LCCOMB_X49_Y2_N28; Fanout = 10; COMB Node = 'A~10'
+        Info: 4: + IC(1.224 ns) + CELL(0.419 ns) = 3.541 ns; Loc. = LCCOMB_X48_Y4_N14; Fanout = 12; COMB Node = 'A~24'
+        Info: 5: + IC(1.014 ns) + CELL(0.393 ns) = 4.948 ns; Loc. = LCCOMB_X46_Y3_N8; Fanout = 2; COMB Node = 'ULA:ULA|op_4~9'
+        Info: 6: + IC(0.000 ns) + CELL(0.410 ns) = 5.358 ns; Loc. = LCCOMB_X46_Y3_N10; Fanout = 1; COMB Node = 'ULA:ULA|op_4~10'
+        Info: 7: + IC(1.318 ns) + CELL(0.420 ns) = 7.096 ns; Loc. = LCCOMB_X48_Y3_N16; Fanout = 1; COMB Node = 'ULA:ULA|Z[5]~258'
+        Info: 8: + IC(0.673 ns) + CELL(0.438 ns) = 8.207 ns; Loc. = LCCOMB_X46_Y2_N6; Fanout = 1; COMB Node = 'ULA:ULA|Z[5]~259'
+        Info: 9: + IC(0.265 ns) + CELL(0.438 ns) = 8.910 ns; Loc. = LCCOMB_X46_Y2_N24; Fanout = 4; COMB Node = 'ULA:ULA|Z[5]~261'
+        Info: 10: + IC(1.487 ns) + CELL(0.279 ns) = 10.676 ns; Loc. = IOC_X57_Y0_N1; Fanout = 1; REG Node = 'REG_RS:SAiDA|RS_FF[5]'
+        Info: Total cell delay = 3.631 ns ( 34.01 % )
+        Info: Total interconnect delay = 7.045 ns ( 65.99 % )
+    Info: - Smallest clock skew is -0.002 ns
+        Info: + Shortest clock path from clock "CLOCK_27" to destination register is 6.461 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'CLOCK_27'
+            Info: 2: + IC(2.132 ns) + CELL(0.787 ns) = 3.898 ns; Loc. = LCFF_X32_Y1_N29; Fanout = 2; REG Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]~_Duplicate_1'
+            Info: 3: + IC(1.000 ns) + CELL(0.000 ns) = 4.898 ns; Loc. = CLKCTRL_G12; Fanout = 44; COMB Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]~clkctrl'
+            Info: 4: + IC(1.266 ns) + CELL(0.297 ns) = 6.461 ns; Loc. = IOC_X57_Y0_N1; Fanout = 1; REG Node = 'REG_RS:SAiDA|RS_FF[5]'
+            Info: Total cell delay = 2.063 ns ( 31.93 % )
+            Info: Total interconnect delay = 4.398 ns ( 68.07 % )
+        Info: - Longest clock path from clock "CLOCK_27" to source register is 6.463 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'CLOCK_27'
+            Info: 2: + IC(2.132 ns) + CELL(0.787 ns) = 3.898 ns; Loc. = LCFF_X32_Y1_N29; Fanout = 2; REG Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]~_Duplicate_1'
+            Info: 3: + IC(1.000 ns) + CELL(0.000 ns) = 4.898 ns; Loc. = CLKCTRL_G12; Fanout = 44; COMB Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]~clkctrl'
+            Info: 4: + IC(1.028 ns) + CELL(0.537 ns) = 6.463 ns; Loc. = LCFF_X48_Y2_N29; Fanout = 9; REG Node = 'TableRom:inst9|REG_FF[6]'
+            Info: Total cell delay = 2.303 ns ( 35.63 % )
+            Info: Total interconnect delay = 4.160 ns ( 64.37 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is 0.078 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Warning: Circuit may not operate. Detected 16 non-operational path(s) clocked by clock "CLOCK_27" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[19]" and destination pin or register "DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]" for clock "CLOCK_27" (Hold time is 1.191 ns)
+    Info: + Largest clock skew is 3.539 ns
+        Info: + Longest clock path from clock "CLOCK_27" to destination register is 6.216 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'CLOCK_27'
+            Info: 2: + IC(4.940 ns) + CELL(0.297 ns) = 6.216 ns; Loc. = IOC_X29_Y0_N0; Fanout = 1; REG Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]'
+            Info: Total cell delay = 1.276 ns ( 20.53 % )
+            Info: Total interconnect delay = 4.940 ns ( 79.47 % )
+        Info: - Shortest clock path from clock "CLOCK_27" to source register is 2.677 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'CLOCK_27'
+            Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 20; COMB Node = 'CLOCK_27~clkctrl'
+            Info: 3: + IC(1.048 ns) + CELL(0.537 ns) = 2.677 ns; Loc. = LCFF_X32_Y1_N19; Fanout = 2; REG Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[19]'
+            Info: Total cell delay = 1.516 ns ( 56.63 % )
+            Info: Total interconnect delay = 1.161 ns ( 43.37 % )
+    Info: - Micro clock to output delay of source is 0.250 ns
+    Info: - Shortest register to register delay is 2.201 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X32_Y1_N19; Fanout = 2; REG Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[19]'
+        Info: 2: + IC(0.306 ns) + CELL(0.393 ns) = 0.699 ns; Loc. = LCCOMB_X32_Y1_N18; Fanout = 1; COMB Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|counter_comb_bita19~COUT'
+        Info: 3: + IC(0.000 ns) + CELL(0.410 ns) = 1.109 ns; Loc. = LCCOMB_X32_Y1_N20; Fanout = 2; COMB Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|counter_comb_bita20'
+        Info: 4: + IC(0.813 ns) + CELL(0.279 ns) = 2.201 ns; Loc. = IOC_X29_Y0_N0; Fanout = 1; REG Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]'
+        Info: Total cell delay = 1.082 ns ( 49.16 % )
+        Info: Total interconnect delay = 1.119 ns ( 50.84 % )
+    Info: + Micro hold delay of destination is 0.103 ns
+Info: tco from clock "CLOCK_27" to destination pin "LEDG[4]" through register "REG_RS:SAiDA|RS_FF[4]" is 9.637 ns
+    Info: + Longest clock path from clock "CLOCK_27" to source register is 6.461 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 3; CLK Node = 'CLOCK_27'
+        Info: 2: + IC(2.132 ns) + CELL(0.787 ns) = 3.898 ns; Loc. = LCFF_X32_Y1_N29; Fanout = 2; REG Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]~_Duplicate_1'
+        Info: 3: + IC(1.000 ns) + CELL(0.000 ns) = 4.898 ns; Loc. = CLKCTRL_G12; Fanout = 44; COMB Node = 'DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[20]~clkctrl'
+        Info: 4: + IC(1.266 ns) + CELL(0.297 ns) = 6.461 ns; Loc. = IOC_X57_Y0_N0; Fanout = 1; REG Node = 'REG_RS:SAiDA|RS_FF[4]'
+        Info: Total cell delay = 2.063 ns ( 31.93 % )
+        Info: Total interconnect delay = 4.398 ns ( 68.07 % )
+    Info: + Micro clock to output delay of source is 0.153 ns
+    Info: + Longest register to pin delay is 3.023 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = IOC_X57_Y0_N0; Fanout = 1; REG Node = 'REG_RS:SAiDA|RS_FF[4]'
+        Info: 2: + IC(0.000 ns) + CELL(3.023 ns) = 3.023 ns; Loc. = PIN_U18; Fanout = 0; PIN Node = 'LEDG[4]'
+        Info: Total cell delay = 3.023 ns ( 100.00 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 211 megabytes
+    Info: Processing ended: Mon Apr 28 19:34:21 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Animal7/Animal7.iml" filepath="$PROJECT_DIR$/Animal7/Animal7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula 05b - Curso em video POO/Aula 05b - Curso em video POO.iml" filepath="$PROJECT_DIR$/Aula 05b - Curso em video POO/Aula 05b - Curso em video POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula 06/Aula 06.iml" filepath="$PROJECT_DIR$/Aula 06/Aula 06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula curso 02/Aula curso 02.iml" filepath="$PROJECT_DIR$/Aula curso 02/Aula curso 02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula04 CURSO POO/Aula04 CURSO POO.iml" filepath="$PROJECT_DIR$/Aula04 CURSO POO/Aula04 CURSO POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Banco Object/Banco Object.iml" filepath="$PROJECT_DIR$/Banco Object/Banco Object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Banco Object PJBL/Banco Object PJBL.iml" filepath="$PROJECT_DIR$/Banco Object PJBL/Banco Object PJBL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PJBL 1 Gabriel/Bases/Bases.iml" filepath="$PROJECT_DIR$/PJBL 1 Gabriel/Bases/Bases.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bases/Bases1.iml" filepath="$PROJECT_DIR$/Bases/Bases1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cursoemvideo/Cursoemvideo.iml" filepath="$PROJECT_DIR$/Cursoemvideo/Cursoemvideo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicio Curso POO JAVA/Exercicio Curso POO JAVA.iml" filepath="$PROJECT_DIR$/Exercicio Curso POO JAVA/Exercicio Curso POO JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicio parte 2/Exercicio parte 2.iml" filepath="$PROJECT_DIR$/Exercicio parte 2/Exercicio parte 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NumeroRacional/NumeroRacional.iml" filepath="$PROJECT_DIR$/NumeroRacional/NumeroRacional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PJBL 1 Gabriel/PjBL/PjBL.iml" filepath="$PROJECT_DIR$/PJBL 1 Gabriel/PjBL/PjBL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prog em Java e POO.iml" filepath="$PROJECT_DIR$/Prog em Java e POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projeto 01 - Filmes/Projeto 01 - Filmes.iml" filepath="$PROJECT_DIR$/Projeto 01 - Filmes/Projeto 01 - Filmes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDE1/TDE1.iml" filepath="$PROJECT_DIR$/TDE1/TDE1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDE2_/TDE2_.iml" filepath="$PROJECT_DIR$/TDE2_/TDE2_.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltraEmojiCombat/UltraEmojiCombat.iml" filepath="$PROJECT_DIR$/UltraEmojiCombat/UltraEmojiCombat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User2/User2.iml" filepath="$PROJECT_DIR$/User2/User2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User9/User9.iml" filepath="$PROJECT_DIR$/User9/User9.iml" />
+    </modules>
+  </component>
+</project>

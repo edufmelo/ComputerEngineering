@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="LAB4">
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB4|DivisorCLK:D|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_9mh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

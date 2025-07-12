@@ -1,0 +1,50 @@
+SUBDESIGN PC
+(
+	CLK  : INPUT;
+	EA   : INPUT;
+	EB   : INPUT;
+	ENA  : INPUT;
+	
+    IN[7..0] : INPUT; --ENTRADAS
+    OUT[7..0] : OUTPUT;
+    OUT_A[7..0]    : OUTPUT; --SAÍDAS
+    OUT_B[7..0]    : OUTPUT; --SAÍDAS
+)
+
+VARIABLE
+    -- 8 DFFE
+    REG_FF[7..0]   : DFFE;
+    
+    BUFFER_A[7..0] : TRI;
+    BUFFER_B[7..0] : TRI;
+    
+    NO[7..0] : NODE;
+    
+    NOA[7..0] : TRI_STATE_NODE;
+    NOB[7..0] : TRI_STATE_NODE;
+    
+
+BEGIN
+    REG_FF[].CLK = CLK; -- Recebe Clock
+    REG_FF[].ENA = ENA; -- Recebe Enable
+
+	BUFFER_A[].OE = EA;
+	BUFFER_B[].OE = EB;
+	
+	REG_FF[].D = IN[];
+	
+	NO[] = REG_FF[].Q;
+	
+	BUFFER_A[].IN = NO[];
+	BUFFER_B[].IN = NO[];
+	
+	OUT[] = NO[]; % NOVO %
+	
+	NOA[] = BUFFER_A[].OUT;
+	NOB[] = BUFFER_B[].OUT;
+	
+	OUT_A[] = NOA[];
+	OUT_B[] = NOB[];
+	
+	
+END;

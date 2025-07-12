@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>D:\PUCPR\Microchip studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\Debug\TesteNANDXOR.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>TesteNANDXOR.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>TesteNANDXOR.map</FILE>
+  <FILE>TesteNANDXOR.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <begin><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\main.asm</FILE><LINE>5</LINE></begin>
+  <testa_s20><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\main.asm</FILE><LINE>9</LINE></testa_s20>
+  <testa_s21><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\main.asm</FILE><LINE>22</LINE></testa_s21>
+  <testa_s10><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\main.asm</FILE><LINE>15</LINE></testa_s10>
+  <liga><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\main.asm</FILE><LINE>12</LINE></liga>
+  <desliga><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\main.asm</FILE><LINE>19</LINE></desliga>
+  <testa_s11><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\TesteNANDXOR\TesteNANDXOR\main.asm</FILE><LINE>26</LINE></testa_s11>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,56 @@
+<Tela>
+    canvas:
+        Color:
+            rgba: 46/255, 139/255, 87/255, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        text: 'Escolha sua série:'
+        pos: 10, 240
+        size: 200, 60
+    Spinner:
+        pos: 210, 240
+        size: 150, 60
+        values: ('Rick and morty', 'Peppa Pig', ' The Boys')
+        text: 'ESCOLHA'
+        on_text: root.escolha(self.text)
+        id: spinner_serie
+    Label:
+        text: 'Quer pipoca?'
+        pos: 10, 180
+        size: 200, 60
+    CheckBox:
+        pos: 210, 180
+        size: 60,60
+        id: pipoca
+
+    Label: 
+        text: 'Periodo:'
+        pos: 10,120
+        size: 200,60
+    BoxLayout:
+        orientation: 'horizontal'
+        pos: 210,120
+        size:180,60
+        CheckBox:
+            id: opmanha
+            group: 'periodo'
+        Label:
+            text: 'Manhã'
+        CheckBox:
+            id: opnoite
+            group: 'periodo'
+        Label:
+            text: 'Noite'
+    Button:
+        text:'Assistir'
+        pos:100,60
+        size:200,60
+        on_release: root.clique_assistir()
+    Label:
+        pos: 10,10
+        size: 380,50
+        font_size: 14 
+        color: 0,0,1,1
+        id: label_saida

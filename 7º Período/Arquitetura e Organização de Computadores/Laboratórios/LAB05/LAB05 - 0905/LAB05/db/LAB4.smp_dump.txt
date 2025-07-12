@@ -1,0 +1,12 @@
+
+State Machine - |LAB4|SM:ME|brain
+Name Ula Jmp Out In Set Mov Decod IncPC resetPC 
+resetPC 0 0 0 0 0 0 0 0 0 
+IncPC 0 0 0 0 0 0 0 1 1 
+Decod 0 0 0 0 0 0 1 0 1 
+Mov 0 0 0 0 0 1 0 0 1 
+Set 0 0 0 0 1 0 0 0 1 
+In 0 0 0 1 0 0 0 0 1 
+Out 0 0 1 0 0 0 0 0 1 
+Jmp 0 1 0 0 0 0 0 0 1 
+Ula 1 0 0 0 0 0 0 0 1 

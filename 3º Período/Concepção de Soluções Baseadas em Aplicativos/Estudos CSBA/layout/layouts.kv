@@ -1,0 +1,58 @@
+<Principal>
+    orientation: 'vertical'
+
+    #boxlayout na horizontal: elementos dispostos um ao lado do outro
+    # o tamanho de cada elemento é calculado automaticamente
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text:"Esse é um"
+        Button:
+            text: "BoxLayout"
+        Button:
+            text: "na horizontal"
+
+    #boxlayout na vertical: elementos dispostos um embaixo do outro
+    # o tamanho de cada elemento é calculado automaticamente
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text:"Esse é um"
+        Button:
+            text: "BoxLayout"
+        Button:
+            text: "na vertical"
+
+    #gridlayout com colunas: Divide o total de elementos pelo numero de colunas, criando
+    # quantas linhas forem necessárias para distribuir todos os elementos nas 3 colunas
+    # o tamanho de cada elemento é calculado automaticamente
+    GridLayout:
+        cols: 3
+
+        Button:
+            text:"Lin1 Col1"
+        Button:
+            text:"Lin1 Col2"
+        Button:
+            text:"Lin1 Col3"
+        Button:
+            text:"Lin2 Col1"
+        Button:
+            text:"Lin2 Col2"
+
+    #gridlayout com linhas: Divide o total de elementos pelo numero de linhas, criando
+    # quantas colunas forem necessárias para distribuir todos os elementos nas 3 linhas
+    # o tamanho de cada elemento é calculado automaticamente
+    GridLayout:
+        rows: 3
+
+        Button:
+            text:"Lin1 Col1"
+        Button:
+            text:"Lin1 Col2"
+        Button:
+            text:"Lin2 Col1"
+        Button:
+            text:"Lin2 Col2"
+        Button:
+            text:"Lin3 Col1"

@@ -1,0 +1,78 @@
+#o quadro tem dimensoes de x=400; y=600, definido pelo window.size no python
+<Principal>
+    orientation: 'vertical'
+
+    #boxlayout 1 de 3 (vai ocupar o terço superior do quadro)
+    # tamanho calculado: x=450 (100% da largura do quadro); y=200 (1/3 da altura do quadro)
+    BoxLayout:
+        orientation: 'horizontal'
+
+        #botao 1 de 3. 
+        Button:
+            #sem citar o size hint: 100% em x; 100% em y
+            text: "tamanho total"
+
+        #botao 1 de 3. 
+        Button:
+            #size hint: 100% em x; 50% em y
+            size_hint: (1, 0.5)
+            text: "altura 50%"
+
+        #botao 1 de 3. 
+        Button:
+            #size hint: 50% em x; 30% em y. Botão terá metade da largura dos outros
+            size_hint: (0.5, 0.3)
+            text: "x=50%\ny=30%"
+
+
+    #boxlayout 2 de 3 (vai ocupar o meio do quadro)
+    # tamanho calculado: x=450 (100% da largura do quadro); y=200 (1/3 da altura do quadro)
+    BoxLayout:
+        orientation: 'horizontal'
+
+        Button:
+            #20% da altura do boxlayout
+            size_hint_y: 0.2
+            #base do botao em 15% da altura
+            pos_hint: {'y': 0.15} 
+            text: 'pos y=15%'
+
+        Button:
+            #20% da altura do boxlayout
+            size_hint_y: 0.2
+            #meio do botao em 50% da altura
+            pos_hint: {'center_y': 0.5} 
+            text: 'pos meio=50%'
+
+        Button:
+            #20% da altura do boxlayout
+            size_hint_y: 0.2
+            #topo do botao em 100% da altura
+            pos_hint: {'top': 1} 
+            text: 'pos top=100%'
+
+    #boxlayout 3 de 3 (vai ocupar o terço inferior do quadro)
+    # tamanho calculado: x=450 (100% da largura do quadro); y=200 (1/3 da altura do quadro)
+    BoxLayout:
+        orientation: 'vertical'
+
+        Button:
+            #30% da largura do boxlayout
+            size_hint_x: 0.3
+            #esquerda do botao em 20% da largura
+            pos_hint: {'x': 0.2} 
+            text: 'pos x=20%'
+
+        Button:
+            #30% da largura do boxlayout
+            size_hint_x: 0.3
+            #meio do botao em 50% da largura
+            pos_hint: {'center_x': 0.5} 
+            text: 'pos center=50%'
+
+        Button:
+            #30% da largura do boxlayout
+            size_hint_x: 0.3
+            #direita do botao em 95% da largura
+            pos_hint: {'right': 0.95} 
+            text: 'pos right=95%'

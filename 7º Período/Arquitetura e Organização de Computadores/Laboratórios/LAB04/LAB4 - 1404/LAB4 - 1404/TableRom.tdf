@@ -1,0 +1,39 @@
+SUBDESIGN TableRom
+(
+	Adress[7..0]		: INPUT;
+	ROM_OUT[12..0]	: OUTPUT;
+	CLK				: INPUT;
+)
+VARIABLE
+	REG_FF[12..0] : DFF;
+	
+BEGIN    
+	REG_FF[].clk = CLK;
+	ROM_OUT[] = REG_FF[].Q;
+	
+	TABLE  Adress [7..0] => REG_FF[].d;       
+	H"0"    => H"1C00";       
+	H"1"    => H"1F04";       
+	H"2"    => H"0200";       
+	H"3"    => H"1F40";       
+	H"4"    => H"1B00";     
+	H"5"    => H"1E00";       
+	H"6"    => H"0";       
+	H"7"    => H"0";       
+	H"8"    => H"0";       
+	H"9"    => H"0";       
+	H"A"    => H"0";       
+	H"B"    => H"0";       
+	H"C"    => H"0";       
+	H"D"    => H"0";       
+	H"E"    => H"0";       
+	H"F"    => H"0";
+	H"10"   => H"0";
+	H"11"   => H"0";
+	H"12"   => H"0";
+	H"13"   => H"0";
+	H"14"   => H"0";
+	
+	
+	END TABLE;
+END; 

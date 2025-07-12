@@ -1,0 +1,30 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\usuario\OneDrive\햞ea de Trabalho\Microprocessados\TesteNAND\TesteNAND\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>D:\PUCPR\Microchip studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Microprocessados\TesteNAND\TesteNAND\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Microprocessados\TesteNAND\TesteNAND\Debug\TesteNAND.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>TesteNAND.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>TesteNAND.map</FILE>
+  <FILE>TesteNAND.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <begin><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Microprocessados\TesteNAND\TesteNAND\main.asm</FILE><LINE>4</LINE></begin>
+  <testa_s2><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Microprocessados\TesteNAND\TesteNAND\main.asm</FILE><LINE>10</LINE></testa_s2>
+  <liga><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Microprocessados\TesteNAND\TesteNAND\main.asm</FILE><LINE>7</LINE></liga>
+  <desliga><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Microprocessados\TesteNAND\TesteNAND\main.asm</FILE><LINE>13</LINE></desliga>
+ </LABELS>
+</ASSEMBLER_INFO>

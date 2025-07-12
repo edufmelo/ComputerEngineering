@@ -1,0 +1,36 @@
+<Principal>
+    orientation: 'vertical'
+    BoxLayout:
+        canvas:
+            Color:
+                #verde
+                rgba: 0, .8, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+            Color:
+                #amarelo
+                rgba: 1, 1, 0, 1
+            Mesh:
+                vertices: (20, self.pos[1] + self.height/2, 0,0,self.width/2, self.pos[1] + 20, 0,0,self.width-20, self.pos[1] + self.height/2, 0,0,self.width/2, self.pos[1] + self.height-20,0,0)
+                indices: (0,1,2,3,0)
+                mode: 'triangle_fan'
+            Color:
+                #azul
+                rgba: 0,0,1,1
+            Ellipse:
+                pos: self.pos[0] + self.width/2 - self.height/4, self.pos[1] + self.height/4
+                size: self.height / 2, self.height / 2
+            Color:
+                #branco
+                rgba: 1,1,1,1
+            Line:
+                ellipse: self.pos[0] + self.width/2 - self.height/2, self.pos[1]-self.height/2.5, self.height, self.height,-27,30
+                width: 5.0
+    
+    BoxLayout:
+        canvas:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "Bandeira_do_Paraná.png"

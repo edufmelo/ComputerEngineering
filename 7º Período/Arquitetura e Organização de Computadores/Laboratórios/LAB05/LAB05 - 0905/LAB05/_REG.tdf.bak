@@ -1,0 +1,34 @@
+SUBDESIGN _REG
+(
+     CLK, OEA, OEB, ENA, IN[7..0] : INPUT; --ENTRADAS
+    OUT_A[7..0], OUT_B[7..0] : OUTPUT; --SAÍDAS
+)
+
+VARIABLE
+    -- 8 DFFE
+    REG[7..0] : DFFE;
+    TRI_A[7..0] : TRI;
+    TRI_B[7..0] : TRI;
+    NO[7..0] : NODE;
+    NoA[7..0] : TRI_STATE_NODE;
+    NoB[7..0] : TRI_STATE_NODE;
+
+BEGIN
+    REG[].ENA = ENA; -- Recebe Enable
+    REG[].CLK = CLK; -- Recebe Clock
+    REG[].D = IN[]; -- Entradas D recebem dados da entrada
+    NO[]=REG[].Q; 
+    
+    -- Buffers tri-state controlados por EA e EB
+    TRI_A[].IN = NO[];
+    TRI_A[].OE = OEA;
+    NoA[] = TRI_A[].OUT;
+    
+    TRI_B[].IN = NO[];
+    TRI_B[].OE = OEB;
+    NoB[] = TRI_B[].OUT;
+    
+    OUT_A[] = NoA[];
+    OUT_B[]= NoB[];
+    
+END;

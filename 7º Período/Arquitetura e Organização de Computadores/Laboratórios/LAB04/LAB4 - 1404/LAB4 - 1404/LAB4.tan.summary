@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : 6.005 ns
+Required Time  : 10.000 ns
+Actual Time    : 3.995 ns
+From           : SW[3]
+To             : REG_RS:SAiDA|RS_FF[7]
+From Clock     : --
+To Clock       : CLOCK_27
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.525 ns
+From           : REG_RS:SAiDA|RS_FF[4]
+To             : LEDG[4]
+From Clock     : CLOCK_27
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.376 ns
+From           : SW[6]
+To             : PC:inst2|REG_FF[6]
+From Clock     : --
+To Clock       : CLOCK_27
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK_27'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 41.36 MHz ( period = 24.178 ns )
+From           : TableRom:inst9|REG_FF[2]
+To             : REG_RS:SAiDA|RS_FF[7]
+From Clock     : CLOCK_27
+To Clock       : CLOCK_27
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCK_27'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[17]
+To             : DivisorCLK:D|lpm_counter:LPM_COUNTER_component|cntr_9mh:auto_generated|safe_q[18]
+From Clock     : CLOCK_27
+To Clock       : CLOCK_27
+Failed Paths   : 11
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 11
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,13 @@
+Reference	Value	Datasheet	Footprint	Qty	DNP
+C1	2200uF/50V	~	Capacitor_THT:CP_Radial_D17.0mm_P7.50mm	1	
+C2,C3	1000uF/25V	~	Capacitor_THT:CP_Radial_D10.0mm_P5.00mm	2	
+C4,C5,C6	100nF/50V	~	Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm	3	
+D1,D2	1N5408	http://www.vishay.com/docs/88516/1n5400.pdf	Diode_THT:D_DO-201AD_P15.24mm_Horizontal	2	
+D3	Vm	~	LED_THT:LED_D5.0mm	1	
+FIXO1,TRAFO1,VREG1	~	~	-- valores mistos --	3	
+HS1,HS2	Heatsink	~	Heatsink:Heatsink_35x26mm_1xFixation3mm_Fischer-SK486-35	2	
+J1	Screw_Terminal_01x02	~	TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal	1	
+R1	1k2	~	Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal	1	
+R2	220R	~	Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal	1	
+U1	LM7805_TO220	https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF	Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown	1	
+U2	LM317_TO-220	http://www.ti.com/lit/ds/symlink/lm317.pdf	Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown	1	

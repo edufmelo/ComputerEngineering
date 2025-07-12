@@ -1,0 +1,33 @@
+PARAMETERS (MaxBit=7);
+
+CONSTANT MaxPos=15;
+CONSTANT MaxAddBit=CEIL(LOG2(MaxPos+1))-1;
+
+subdesign RAM
+(
+	a[MaxAddBit..0]:INPUT;
+	din[MaxBit..0]:INPUT;
+	dout[MaxBit..0]:BIDIR;
+	ie,clock,oe:INPUT;
+)
+VARIABLE
+	ffs[MaxPos..0][MaxBit..0]:DFFE;
+	buf[MaxPos..0][MaxBit..0]:TRI;
+	NOS[MaxBit..0]:TRI_STATE_NODE;
+	ENA_NOS[MaxPos..0]:NODE;
+BEGIN
+	FOR CONT_END IN 0 TO MaxPos GENERATE
+		ENA_NOS[CONT_END] = (a[]==CONT_END);
+		NOS[] = buf[CONT_END][].out;
+		FOR CONT_BIT IN 0 TO MaxBit GENERATE
+			ffs[CONT_END][CONT_BIT].d=din[CONT_BIT];
+			ffs[CONT_END][CONT_BIT].clk=clock;
+			ffs[CONT_END][CONT_BIT].ena = (ENA_NOS[CONT_END] AND ie);
+			buf[CONT_END][CONT_BIT].in = ffs[CONT_END][CONT_BIT].q;
+			buf[CONT_END][CONT_BIT].oe = (ENA_NOS[CONT_END] AND oe);
+		END GENERATE;
+	END GENERATE;
+	dout[] = NOS[];
+END;
+
+

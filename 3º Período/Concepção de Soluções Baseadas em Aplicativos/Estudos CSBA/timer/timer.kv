@@ -1,0 +1,21 @@
+<Principal>
+    orientation: 'vertical'
+    BoxLayout:
+        size_hint_y: 0.2
+        orientation: 'horizontal'
+        Label:
+            size_hint_x: 1.5
+            text: "Informe o tempo do timer"
+        TextInput:
+            id: tempo_timer
+            font_size: 25
+            halign: 'center'
+            valign: 'center'
+        Button:
+            text: "Iniciar"
+            id:botao_timer
+            on_release: root.clique_botao()
+    Label:
+        text: "0"
+        id: timer
+        font_size: 60

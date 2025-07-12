@@ -1,0 +1,114 @@
+INCLUDE "ULA_DEF.inc";
+INCLUDE "REGS_DEF.inc";
+INCLUDE "INSTRUCT_DEF.inc";
+
+%
+	Substitua os ??? pelos nomes de operações da ULA, registradores e instruções descrtios nos arquivos acima.
+%
+
+Subdesign SM
+(
+	Instruction[12..0],clk,rst, FLAG_Z : INPUT;
+	SourceA[3..0], SourceB[3..0], Target[3..0], Operation[3..0]: OUTPUT;
+	ena_flag: OUTPUT;
+)
+VARIABLE
+	brain : MACHINE WITH STATES (resetPC,IncPC,Decod,Mov,Set,In,Out,Jmp, Ula, Load, Store);
+BEGIN
+	DEFAULTS
+		ena_flag = gnd;
+		SourceA[] = _NONE;
+		SourceB[] = _NONE;
+		Target[] = _NONE;
+		Operation[] = _BYPASS_A;
+	END DEFAULTS;
+	
+	brain.clk=clk;
+	brain.reset=rst;
+
+	case brain is
+		when resetPC =>
+
+			SourceA[] = _AC;
+			SourceB[] = _AC;
+			Target[] = _PC;
+			Operation[] = _SUB;
+			brain = Decod;
+
+		when IncPC=>
+			SourceA[] = _PC;
+			%SourceB[] = _NONE;%
+			Target[] = _PC;
+			Operation[] = _INC;
+			brain = Decod;
+
+		when Decod=>
+
+			case Instruction[12..8] IS
+				when COM_MOV =>
+					brain = Mov ;
+				when COM_SET =>
+					brain = Set;
+				when COM_JMP =>
+					brain = Jmp;
+
+				when COM_JZ =>
+					IF(FLAG_Z) THEN
+						brain = Jmp ;
+					ELSE
+						brain = INCPC;					
+					END IF;
+					
+				when COM_IN =>
+					brain = In ;
+					
+				when COM_OUT =>
+					brain = Out ;
+				when COM_LOAD=>
+					brain= Load;
+				when COM_STORE=>
+					brain= Store;
+
+				when others =>
+					brain = Ula ;
+			end case;
+			
+		when MOV=>
+			SourceA[] = Instruction[3..0]; -- ORIGEM REGISTRADOR
+			%SourceB[] = ; %
+			Target[] = Instruction[7..4]; -- DESTINO REGISTRADOR
+			Operation[] = _BYPASS_A;
+			brain = INCPC;
+		when Set=> -- QUANDO AC RECEBE VALOR DE 8 BITS
+			SourceA[] = _ROM;
+			%SourceB[] = ;%
+			Target[] = _AC;
+			Operation[] = _BYPASS_A;
+			brain = INCPC;
+		when In=>
+			SourceA[] = _IO;
+			%SourceB[] = ;%
+			Target[] = _AC;
+			Operation[] = _BYPASS_A;
+			brain = INCPC;
+		when Out=>
+			SourceA[] = _AC;
+			%SourceB[] = ;%
+			Target[] = _IO;
+			Operation[] = _BYPASS_A;
+			brain = INCPC;
+		when Jmp=>
+			SourceA[] = _ROM;
+			%SourceB[] = ;%
+			Target[] = _PC;
+			Operation[] = _BYPASS_A;
+			brain = Decod;
+		when Ula=>
+			ena_flag = vcc;
+			SourceA[] = Instruction[7..4];
+			SourceB[] = Instruction[3..0];
+			Target[] = Instruction[7..4];
+			Operation[] = Instruction[11..8];
+			brain = INCPC;
+	end case;
+END;

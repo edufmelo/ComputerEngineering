@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>D:\PUCPR\Microchip studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\serial.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\Debug\teste_serial1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>teste_serial1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>teste_serial1.map</FILE>
+  <FILE>teste_serial1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\main.asm</FILE><LINE>5</LINE></start>
+  <config_1200_8_n_1><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\serial.inc</FILE><LINE>8</LINE></config_1200_8_n_1>
+  <tx><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\serial.inc</FILE><LINE>27</LINE></tx>
+  <tx1><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\serial.inc</FILE><LINE>29</LINE></tx1>
+  <rx><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\serial.inc</FILE><LINE>38</LINE></rx>
+  <rx1><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\serial.inc</FILE><LINE>40</LINE></rx1>
+  <imprime_arroba><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\main.asm</FILE><LINE>14</LINE></imprime_arroba>
+  <fim><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\teste_serial1\teste_serial1\main.asm</FILE><LINE>11</LINE></fim>
+ </LABELS>
+</ASSEMBLER_INFO>

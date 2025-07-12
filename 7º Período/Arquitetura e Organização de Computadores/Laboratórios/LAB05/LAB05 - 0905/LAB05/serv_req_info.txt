@@ -1,0 +1,51 @@
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0d8ed9b7: atm_amerge + 0x3d9b7 (amerge_mini_merge + 0x3a5d7)
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Mon Apr 28 18:47:29 2025</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>AMERGE</sub_system>
+	<file>/quartus/atm/amerge/amerge_kpt_op.cpp</file>
+	<line>220</line>
+	<callstack>
+	0x0d84d9b7: atm_amerge + 0x3d9b7 (amerge_mini_merge + 0x3a5d7)
+	0x016c30d5: ccl_cfg_ini + 0x30d5 (?cfg_force_qexe_mode_off@@YIXXZ + 0x1e15)
+	0x0d84d152: atm_amerge + 0x3d152 (amerge_mini_merge + 0x39d72)
+	0x0d85405d: atm_amerge + 0x4405d (amerge_mini_merge + 0x40c7d)
+	0x0d81321d: atm_amerge + 0x321d
+	0x0d8133f1: atm_amerge + 0x33f1 (amerge_mini_merge + 0x11)
+	0x00412d94: quartus_map + 0x12d94
+	0x016c50d0: ccl_cfg_ini + 0x50d0 (?cfg_write_user_ini_file@@YI_NXZ + 0xbe0)
+	0x096f079b:
+	0x0c4b67e7:
+	0x096f079b:
+	0x004185fa: quartus_map + 0x185fa
+	0x016294f2: ccl_mem + 0x94f2 (?locked_allocate@MEM_SEGMENT_INTERNAL@@AAIPAXPADKKPAVMEM_TRACKER_DATA@@@Z + 0x62)
+	0x04362931: db_rdb + 0x2931 (??0RDB_WAVEFORM_OBJECT@@QAE@XZ + 0x211)
+	0x019120a6: comp_qcu + 0x20a6 (??1QCU_ACF_SETTING@@QAE@XZ + 0x126)
+	0x01915a66: comp_qcu + 0x5a66 (??4QCU_ACF_SETTING@@QAEAAU0@ABU0@@Z + 0x3366)
+	0x00409d3b: quartus_map + 0x9d3b
+	0x0041ab09: quartus_map + 0x1ab09
+	0x018cce32: comp_qexe + 0xce32 (?qexe_get_command_line@@YIPBDXZ + 0x3a2)
+	0x019138e3: comp_qcu + 0x38e3 (??4QCU_ACF_SETTING@@QAEAAU0@ABU0@@Z + 0x11e3)
+	0x01917c29: comp_qcu + 0x7c29 (?check_license@QCU_FRAMEWORK@@UAI_NXZ + 0x139)
+	0x018cfbbd: comp_qexe + 0xfbbd (?qexe_process_cmdline_arguments@@YI_NPAVQEXE_CMDLINE@@HPAPBD@Z + 0x34d)
+	</callstack>
+	<error>cmp_merge_kpt_db</error>
+	<date>Mon Apr 28 18:48:06 2025</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>cmp_merge_kpt_db
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+

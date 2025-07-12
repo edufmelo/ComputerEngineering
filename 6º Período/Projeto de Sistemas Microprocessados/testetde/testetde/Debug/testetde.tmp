@@ -1,0 +1,49 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>D:\PUCPR\Microchip studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:/PUCPR\Microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\Debug\testetde.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>testetde.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>testetde.map</FILE>
+  <FILE>testetde.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <config><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</FILE><LINE>4</LINE></config>
+  <tx_string><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>25</LINE></tx_string>
+  <tx_string_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>29</LINE></tx_string_loop>
+  <tx_string_fim><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>36</LINE></tx_string_fim>
+  <tx_R17><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>66</LINE></tx_R17>
+  <config_4800_8_n_2><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>46</LINE></config_4800_8_n_2>
+  <tx_R17_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>68</LINE></tx_R17_loop>
+  <rx_R17><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>77</LINE></rx_R17>
+  <rx_R17_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>79</LINE></rx_R17_loop>
+  <config_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>87</LINE></config_loop>
+  <tx_R18><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>101</LINE></tx_R18>
+  <tx_R18_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>103</LINE></tx_R18_loop>
+  <tx_R19><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>112</LINE></tx_R19>
+  <tx_R19_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>114</LINE></tx_R19_loop>
+  <rx_check><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\tx_serial.inc</FILE><LINE>122</LINE></rx_check>
+  <imprime><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</FILE><LINE>16</LINE></imprime>
+  <start><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</FILE><LINE>7</LINE></start>
+  <welcome><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</FILE><LINE>23</LINE></welcome>
+  <main_loop><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</FILE><LINE>10</LINE></main_loop>
+  <digite><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</FILE><LINE>26</LINE></digite>
+  <resultado_dado1><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</FILE><LINE>29</LINE></resultado_dado1>
+  <resultado_dado2><FILE>C:\Users\usuario\OneDrive\햞ea de Trabalho\Projeto de Sistemas Microprocessados\testetde\testetde\main.asm</FILE><LINE>32</LINE></resultado_dado2>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,48 @@
+<Tela>
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: 'Seu curso:'
+            size_hint_x: 1.5
+        TextInput:
+            id: text1
+    BoxLayout:
+        orientation: 'horizontal'
+        Label: 
+            text: 'Pretende trabalhar com o que?'
+            size_hint_x: 1.5
+        TextInput:
+            id: text2
+    BoxLayout:
+        Spinner:
+            text: 'Hobby'
+            values: 'jogar futebol','cozinhar'
+            id: saida_spinner
+            size_hint_y: 0.5
+            pos_hint: {'y': 0.15} 
+    BoxLayout:
+        orientation: 'horizontal'
+        CheckBox:
+            group: 'eae'
+            id: op1
+            text: 'viajar o mundo'
+        Label: 
+            text: 'viajar o mundo'
+            id: check1
+        CheckBox: 
+            group: 'eae'
+            id: op2
+        Label:
+            text: 'conhecer o Neymar'
+            id: check2
+    BoxLayout:
+        orientation: 'horizontal'
+        Button: 
+            text: 'Gerar respostas'
+            size_hint_y: 0.5
+            pos_hint:{'top': 0.9}
+            on_release: root.clique()
+    BoxLayout: 
+        orientation: 'vertical'
+        Label: 
+            id: saida

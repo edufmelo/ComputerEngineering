@@ -1,0 +1,41 @@
+<Tela>
+    orientation: 'vertical'
+    Widget:
+        size_hint: (1,2)
+        canvas:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: root.imagem_fundo
+
+    Label:
+        text: 'Planeta Terra'
+        font_size: 30
+        size_hint_y: None
+        height: 40
+        id: mensagem
+        
+    BoxLayout:
+        orientation:'horizontal'
+        Label:
+            text: 'Gravidade'
+        Spinner:
+            size_hint_x:2
+            size_hint_y:None
+            height:30
+            pos_hint: {'center_y': 0.5}
+            values:('Terra','Lua','Saturno','Jupiter')
+            text:'Terra'
+            on_text: root.muda_gravidade(self.text)
+        Label:
+            text:'Som'
+        CheckBox:
+            size_hint_x:0.5
+            active: True
+            on_active: root.define_som(self.active)
+        Button:
+            text: 'Sair'
+            size_hint_y:None
+            height:30
+            pos_hint: {'center_y':0.5}
+            on_release:root.sair()

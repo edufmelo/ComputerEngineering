@@ -1,0 +1,51 @@
+INCLUDE "ULA_DEF.INC";
+
+SUBDESIGN ULA
+(
+    A[7..0], B[7..0], Operation[3..0]    : INPUT;
+    Z[7..0], Flagz                       : OUTPUT;
+    clk, ena_Flag                        : input;
+)
+
+VARIABLE
+
+	REG_FLAG : DFFE;
+
+BEGIN
+
+	REG_FLAG.clk = clk;
+	REG_FLAG.ena = ena_Flag;
+	REG_FLAG.d = (Z[] == 0);
+	Flagz = REG_FLAG.q;
+	
+    CASE Operation[] IS
+        WHEN _ADD => %_ADD = 0 %
+            Z[] = A[] + B[];
+        WHEN _SUB => %_SUB = 1 %
+            Z[] = A[] - B[];
+        WHEN _INC => %_INC = 2 %
+            Z[] = A[] + 1;
+        WHEN _DEC => %_DEC = 3 %
+            Z[] = A[] - 1;
+        WHEN _CPL => %_CPL = 4 %
+            Z[] = !A[];
+        WHEN _AND => %_AND = 5 %
+            Z[] = A[] & B[];
+        WHEN _OR  => %_OR = 6 %
+            Z[] = A[] # B[];
+        WHEN _XOR => %_XOR = 7 %
+            Z[] = A[] XOR B[];
+        WHEN _RL =>
+			Z[]=(0,A[7..1]);
+		WHEN _SWAP =>
+			Z[]=(A[3..0],A[7..4]);
+		WHEN _RR =>
+			Z[]=(A[6..0],0];
+        WHEN _BYPASS_A => %_BYPASS_A = 14 %
+            Z[] = A[];
+        WHEN _BYPASS_B => %_BYPASS_B = 15 %
+            Z[] = B[];
+        WHEN OTHERS =>
+            Z[] = A[];
+    END CASE;
+END;
